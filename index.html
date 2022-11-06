@@ -1,57 +1,36 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Generador Random</title>
-	<script type="text/javascript">
-		function mueveReloj(){
-			momentoActual = new Date();
-			hora = momentoActual.getHours();
-			minuto = momentoActual.getMinutes();
-			segundo = momentoActual.getSeconds();
-			horaImprimible = hora+":"+minuto+":"+segundo;
-			document.form_reloj.reloj.value= horaImprimible;
-			setTimeout("mueveReloj()",1000);
-		}
-
-		function nuevo(){
-			
-		}
-	</script>
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body onload="mueveReloj()">
+	<script src="js.js"></script>
+	<header>
+		<h1>Bienvenido al generador random de padorus</h1>
+		<h2>Padorus Random</h2>
+	</header>
+
+	<article id ="hora">
+		<h2>Hora Actual</h2>
+		<form name="form_reloj">
+			<input type="text" name="reloj" size= "10">
+		</form>
+	</article>
 	
-	<h1>Bienvenido al generador random de padorus</h1>
+	<article id ="Padoru">
+		<h2>Quieres Generar un padoru?</h2>
+		<img id="imagen" src="recursos/padorugif.gif" height="200" width="200">
+		<br>
+		<button onclick="imagenRandom()">Generar</button>
+	</article>
 	
-		<table>
-			<thead>
-				<th>Hora Actual</th>
-				<th>Padorus Random</th>
-				<th>Sube tu padoru</th>
-			</thead>
-			<tbody>
-				<tr>
-					<td><form name="form_reloj">
-							<input type="text" name="reloj" size= "10">
-						</form>
-					</td>
-					<td>Quieres Generar un padoru?
-						<form action="randomizador.php" name="envio" id="envio"><input type="submit" name="envio1">
-						</form>
-					</td>
-					<td><form action="randomizador.php" name="envio" id="envio">
-						<input type="submit" name="envio1" value="Subir">
-						</form>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="3"><img src="recursos/padorugif.gif" height="200" width="200"></td>
-				</tr>
-			</tbody>
-		</table>
-		
-	
+	<article id ="Subir">
+		<h2>Sube tu padoru</h2>
+		<button onclick= "CargarPadoru()">Subir</button>
+	</article>
 	
 </body>
 </html>
