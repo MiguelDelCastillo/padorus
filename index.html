@@ -1,47 +1,8 @@
 <!DOCTYPE html>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Generador Random</title>
-	<style type="text/css">
-		body{
-			text-align: center;
-			font-family: Arial;
-		}
-		table{
-			text-align: center;
-
-		}
-		input[type=text], select {
-		 	width: 100%;
-		 	padding: 12px 20px;
-		 	margin: 8px 0;
-		 	display: inline-block;
-		 	border: 1px solid #ccc;
-		 	border-radius: 4px;
-		 	box-sizing: border-box;
-		 	cursor: pointer;
-		}
-		div {
-			border-radius: 5px;
-			background-color: #e95c59;
-			padding: 20px;
-		}
-		input[type=submit] {
-			width: 60%;
-			background-color: #4CAF50;
-			color: white;
-			padding: 14px 20px;
-			margin: 8px 0;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-			}
-
-		input[type=submit]:hover {
-			background-color: #45a049;
-			}
-	</style>
 	<script type="text/javascript">
 		function mueveReloj(){
 			momentoActual = new Date();
@@ -57,15 +18,16 @@
 			
 		}
 	</script>
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body onload="mueveReloj()">
-	<h1>Bienvenido al generador random de padoru´s</h1>
-	<center>
-		<div>
+	
+	<h1>Bienvenido al generador random de padorus</h1>
+	
 		<table>
 			<thead>
 				<th>Hora Actual</th>
-				<th>Padoru´s Random</th>
+				<th>Padorus Random</th>
 				<th>Sube tu padoru</th>
 			</thead>
 			<tbody>
@@ -84,14 +46,12 @@
 					</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td><img src="padgif.gif" height="200" width="200"></td>
-					<td></td>
+					<td colspan="3"><img src="recursos/padorugif.gif" height="200" width="200"></td>
 				</tr>
 			</tbody>
 		</table>
-		</div>
-	</center>
+		
+	
 	
 </body>
 </html>
